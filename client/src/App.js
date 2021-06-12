@@ -1,6 +1,8 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import Welcome from "./components/Welcome";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Play from "./components/Play";
+import Question from "./components/Question";
 
 function App() {
   const [data, setData] = React.useState(null);
@@ -10,15 +12,14 @@ function App() {
       .then((res) => res.json())
       .then((data) => setData(data.message));
   }, []);
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{!data ? "Loading..." : data}</p>
-      </header>
-    </div>
-  );
+  !data ? console.log("Loading...") : console.log(data);
+  return (<Router>
+    <Switch>
+      <Route path="/" exact component={() => <Welcome />} />
+      <Route path="/play" exact component={() => <Play />} />
+      <Route path="/question" component={() => <Question />} />
+    </Switch>
+  </Router>)
 }
 
 export default App;

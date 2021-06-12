@@ -15,6 +15,14 @@ app.get("/api", (req, res) => {
     });
 });
 
+app.get("/api/questions", (req, res) => {
+    const questions = [
+        {id: 1, question: "What is the capital of China?", answer: "Beijing"},
+        {id: 2, question: "Who is the president of China?", answer: "Xi Jiping"}
+    ];
+    res.json(questions);
+})
+
 // All other GET requests not handled before will return our React app
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
