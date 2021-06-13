@@ -36,7 +36,7 @@ function App() {
     return data;
   };
   const data = useFetch(
-    "http://localhost:3001/api/questions"
+    "/api/questions"
   );
 
   console.log(data);
