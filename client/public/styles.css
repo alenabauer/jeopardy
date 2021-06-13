@@ -8,7 +8,6 @@ body {
     background: url('./imgs/background-gradient.jpg');
     background-size: cover;
     height: 100vh;
-    overflow: hidden;
 }
 
 /* Welcome Page */
@@ -33,32 +32,44 @@ h1.greeting {
     letter-spacing: 1px;
     font-weight: 300;
     font-size: 40px;
-    animation-name: moveInLeft;
+    animation-name: fadeIn;
     animation-duration: 1s;
     animation-timing-function: ease-out;
-    transform: translateX(-12px);
 }
 .greeting-mid-line {
     display: block;
     text-transform: lowercase;
-    letter-spacing: 16px;
+    letter-spacing: 10px;
     font-size: 31px;
     font-weight: 300;
     animation-name: fadeIn;
     animation-duration: 1s;
     animation-timing-function: ease-out;
-    transform: translateX(-7px);
 }
 .greeting-second-line {
     margin-top: 40px;
     display: block;
     text-transform: uppercase;
-    font-size: 70px;
+    font-size: 75px;
     letter-spacing: 6px;
-    animation-name: moveInRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
+    background: linear-gradient(to right,#FDC621 10%, #F25A02 50%, #FDC621 80%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
 }
+
+@keyframes textclip {
+	to {
+		background-position: 200% center;
+	}
+}
+
 
 .btn-start:link,
 .btn-start:visited {
@@ -71,7 +82,7 @@ h1.greeting {
     padding: 12px 32px;
     box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
     line-height: 1.25;
-    background-color: #F15B04;
+    background:#F25A02;
     text-decoration: none;
     color: white;
     font-size: 30px;
@@ -79,7 +90,7 @@ h1.greeting {
     font-weight: 400;
     text-transform: uppercase;
     position: relative;
-    transition: background-color .6s ease;
+    transition: background .6s ease;
     overflow: hidden;
     border-radius: 20px;
     animation-name: fadeIn;
@@ -87,7 +98,7 @@ h1.greeting {
     animation-timing-function: ease-out;
 }
 .btn-start:hover {
-    background-color: #A13C02;
+    background: #A13C02;
 }
 
 
