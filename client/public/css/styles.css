@@ -167,9 +167,17 @@ h1.greeting {
     letter-spacing: 2px;
     text-transform: uppercase;
 }
+.category-box:hover {
+    font-size: 34px;
+    padding: 37px 10px;
+}
+
 .category-box p {
     padding: 0;
     margin: 0;
+}
+.category-box p:hover {
+    cursor: default;
 }
 
 .score-box:link,
@@ -190,7 +198,7 @@ h1.greeting {
 
 .score-box:hover {
     cursor: pointer;
-    background-color: #fecb34;
+    background: linear-gradient(110deg, rgba(253,193,13,1) 0%, rgba(254,209,72,1) 8%, rgba(254,229,154,1) 42%, rgba(254,209,72,1) 78%, rgba(253,193,13,1) 100%);
     color: #030C4C;
 }
 
