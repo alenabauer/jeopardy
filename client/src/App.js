@@ -49,13 +49,18 @@ function App() {
     function getAnswer(questionID) {
       if (data == null || data == []) {
         return ("Can't connect to the server")}
-        else {return data[questionID]["answer"]};      }
+        else {return data[questionID]["answer"]};
+    }
+    
+    function getImgSrc(questionID) {
+      return data[questionID]["questionImg"];
+    }
   
   return (<Router>
     <Switch>
       <Route path="/" exact component={() => <Welcome />} />
       <Route path="/play" exact component={() => <Play />} />
-      <Route path="/question/:id" component={() => <Question question={getQuestion} answer={getAnswer} />} />
+      <Route path="/question/:id" component={() => <Question question={getQuestion} answer={getAnswer} img={getImgSrc} />} />
       {/* <Route path="/question/:id" render={(props) => <Question {...props} />} /> */}
     </Switch>
   </Router>)

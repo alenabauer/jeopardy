@@ -14,10 +14,13 @@ function Question(props) {
         setAsClicked(true);
     }
 
+    console.log(props.img(id - 1));
+
     return (
         <div className="question-container">
             <Link className="back-btn" to="/play"><FontAwesomeIcon className="back-btn-icon" icon={faArrowAltCircleLeft} /></Link>
             <p className={clicked ? "question-move" : "question"}> {props.question(id - 1)} </p>
+            {props.img(id - 1) != undefined && <img class={clicked ? "question-img-move" : "question-img"} src={`../imgs/${props.img(id - 1)}.jpg`} alt="question-img" />}
             {clicked && <div><p className="answer"> {props.answer(id - 1)} </p></div>}
             <button class="show-answer-btn" onClick={handleClick}>Ответ</button>
         </div>
