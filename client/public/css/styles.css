@@ -194,6 +194,8 @@ h1.greeting {
     font-size: 42px;
     padding: 30px 10px;
     text-align: center;
+    background: transparent;
+    color: #FECB34;
 }
 
 .score-box:hover {
@@ -202,6 +204,9 @@ h1.greeting {
     color: #030C4C;
 }
 
+.clicked {
+    background: red;
+}
 
 
 
@@ -211,6 +216,7 @@ h1.greeting {
     text-align: center;
     padding-top: 20px;
     margin: 0 auto;
+    white-space: pre-wrap;
 }
 
 .question {
@@ -282,7 +288,7 @@ h1.greeting {
     all: unset;
     display: block;
     position: absolute;
-    bottom: 5vh;
+    bottom: 1vh;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fecb34;
