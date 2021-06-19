@@ -42,7 +42,7 @@ app.get("/api/questions", (req, res) => {
         {id: 23, question: "Какое блюдо не относится к традиционным блюдам провинции Сычуань?\n麻辣烫 málàtàng / 红烧肉 hóngshāoròu /  麻辣豆腐 málà dòufu", answer: "红烧肉 hóngshāoròu"},
         {id: 24, question: "Какое пекинское блюдо является самым известным в мире?", answer: "烤鸭 kǎoyā утка по-пекински"},
         {id: 25, question: "Какой вкус является типичным для шанхайских блюд?", answer: "甜 tián сладкий"},
-        {id: 26, question: "Какое блюдо изображено на картинке?", questionImg: "guobaorou", answer: "锅包肉guōbāoròu гобаожоу"}
+        {id: 26, question: "Какое блюдо изображено на картинке?", questionImg: "guobaorou", answer: "锅包肉 guōbāoròu гобаожоу"}
     ];
     res.json(questions);
 })

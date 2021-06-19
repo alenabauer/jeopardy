@@ -1,58 +1,54 @@
 import React, { useEffect, useState } from "react";
+import { render } from "react-dom";
 import { Link, withRouter } from "react-router-dom";
-import LinkButton from './LinkButton';
+import ScoreBox from "./ScoreBox";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFlagCheckered } from '@fortawesome/free-solid-svg-icons';
 
 function Play() {
-
-    const [clicked, setAsClicked] = useState(false);
-
-    function handleClick(event) {
-        event.preventDefault();
-        setAsClicked(true);
-    }
-
     return(
     <div class="tablo">
         <div class="category-container">
             <div class="category-box"><p>Китай</p></div>
-            <LinkButton class={clicked ? "score-box clicked" : "score-box"} to="/question/1" onClick={handleClick}>100</LinkButton>
-            <LinkButton class="score-box" to="/question/2">200</LinkButton>
-            <LinkButton class="score-box" to="/question/3">300</LinkButton>
-            <LinkButton class="score-box" to="/question/4">400</LinkButton>
-            <LinkButton class="score-box" to="/question/5">500</LinkButton>
+            <ScoreBox route="/question/1" btnId="btn1" score="100" />
+            <ScoreBox route="/question/2" btnId="btn2" score="200" />
+            <ScoreBox route="/question/3" btnId="btn3" score="300" />
+            <ScoreBox route="/question/4" btnId="btn4" score="400" />
+            <ScoreBox route="/question/5" btnId="btn5" score="500" />
         </div>
         <div class="category-container">
             <div class="category-box"><p>Праздники</p></div>
-            <LinkButton to="/question/6" class="score-box">100</LinkButton>
-            <LinkButton to="/question/7" class="score-box">200</LinkButton>
-            <LinkButton to="/question/8" class="score-box">300</LinkButton>
-            <LinkButton to="/question/9" class="score-box">400</LinkButton>
-            <LinkButton to="/question/10" class="score-box">500</LinkButton>
+            <ScoreBox route="/question/6" btnId="btn6" score="100" />
+            <ScoreBox route="/question/7" btnId="btn7" score="200" />
+            <ScoreBox route="/question/8" btnId="btn8" score="300" />
+            <ScoreBox route="/question/9" btnId="btn9" score="400" />
+            <ScoreBox route="/question/10" btnId="btn10" score="500" />
         </div>
         <div class="category-container">
             <div class="category-box"><p>Чай</p></div>
-            <LinkButton to="/question/11" class="score-box">100</LinkButton>
-            <LinkButton to="/question/12" class="score-box">200</LinkButton>
-            <LinkButton to="/question/13" class="score-box">300</LinkButton>
-            <LinkButton to="/question/14" class="score-box">400</LinkButton>
-            <LinkButton to="/question/15" class="score-box">500</LinkButton>
+            <ScoreBox route="/question/11" btnId="btn11" score="100" />
+            <ScoreBox route="/question/12" btnId="btn12" score="200" />
+            <ScoreBox route="/question/13" btnId="btn13" score="300" />
+            <ScoreBox route="/question/14" btnId="btn14" score="400" />
+            <ScoreBox route="/question/15" btnId="btn15" score="500" />
         </div>
         <div class="category-container">
             <div class="category-box"><p>Слова</p></div>
-            <LinkButton to="/question/16" class="score-box">100</LinkButton>
-            <LinkButton to="/question/17" class="score-box">200</LinkButton>
-            <LinkButton to="/question/18" class="score-box">300</LinkButton>
-            <LinkButton to="/question/19" class="score-box">400</LinkButton>
-            <LinkButton to="/question/20" class="score-box">500</LinkButton>
+            <ScoreBox route="/question/16" btnId="btn16" score="100" />
+            <ScoreBox route="/question/17" btnId="btn17" score="200" />
+            <ScoreBox route="/question/18" btnId="btn18" score="300" />
+            <ScoreBox route="/question/19" btnId="btn19" score="400" />
+            <ScoreBox route="/question/20" btnId="btn20" score="500" />
         </div>
         <div class="category-container">
             <div class="category-box"><p>Еда</p></div>
-            <LinkButton to="/question/21" class="score-box">100</LinkButton>
-            <LinkButton to="/question/22" class="score-box">200</LinkButton>
-            <LinkButton to="/question/23" class="score-box">300</LinkButton>
-            <LinkButton to="/question/24" class="score-box">400</LinkButton>
-            <LinkButton to="/question/25" class="score-box">500</LinkButton>
+            <ScoreBox route="/question/21" btnId="btn21" score="100" />
+            <ScoreBox route="/question/22" btnId="btn22" score="200" />
+            <ScoreBox route="/question/23" btnId="btn23" score="300" />
+            <ScoreBox route="/question/24" btnId="btn24" score="400" />
+            <ScoreBox route="/question/25" btnId="btn25" score="500" />
         </div>
+        <Link className="final-btn" to="/final"><FontAwesomeIcon className="final-btn-icon" icon={faFlagCheckered} /></Link>
     </div>)
 };
 

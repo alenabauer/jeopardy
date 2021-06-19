@@ -17,8 +17,12 @@ body {
     top: 35vh;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
+    width: 70%;
     text-align: center;
+}
+
+.thankyou-container {
+    top: 20vh;
 }
 
 h1.greeting {
@@ -198,6 +202,22 @@ h1.greeting {
     color: #FECB34;
 }
 
+.final-btn {
+    display: block;
+    width: max-content;
+    margin: 5vh 0vh 0 auto;
+}
+.final-btn-icon {
+    color: rgba(254, 203, 52, 0.1);
+    font-size: 50px;
+    transition: color .6s ease;
+    box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
+}
+
+.final-btn-icon:hover {
+    color: #F15B04;
+}
+
 .score-box:hover {
     cursor: pointer;
     background: linear-gradient(110deg, rgba(253,193,13,1) 0%, rgba(254,209,72,1) 8%, rgba(254,229,154,1) 42%, rgba(254,209,72,1) 78%, rgba(253,193,13,1) 100%);
@@ -205,10 +225,14 @@ h1.greeting {
 }
 
 .clicked {
-    background: red;
+    color: rgba(0,0,0,0);
 }
 
-
+.clicked:hover {
+    cursor: default;
+    background: transparent;
+    color: transparent;
+}
 
 .question-container {
     color:#FECB34;
@@ -219,6 +243,7 @@ h1.greeting {
     white-space: pre-wrap;
 }
 
+
 .question {
     font-size: 45px;
 
@@ -228,6 +253,13 @@ h1.greeting {
     height: 50vh;
     border-radius: 5%;
     box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.thankyou-img {
+    height: 40vh;
     animation-name: fadeIn;
     animation-duration: 1s;
     animation-timing-function: ease-out;
@@ -313,11 +345,15 @@ h1.greeting {
     width: max-content;
     margin: 0 auto 10vh;
 }
+
 .back-btn-icon {
     color: #FECB34;
     font-size: 50px;
     transition: color .6s ease;
     box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
+}
+.thank-you {
+    color:rgba(254, 203, 52, 0.1)
 }
 .back-btn-icon:hover {
     color: #F15B04;

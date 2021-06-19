@@ -15,6 +15,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "@rooks/use-sessionstorage": "^4.11.2",
     "axios": "^0.21.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
