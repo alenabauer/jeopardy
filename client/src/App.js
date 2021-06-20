@@ -9,17 +9,8 @@ import ThankYou from "./components/ThankYou";
 import axios from 'axios';
 
 function App() {
-  // const [data, setData] = React.useState(null);
 
-  // React.useEffect(() => {
-  //   fetch("/api")
-  //     .then((res) => res.json())
-  //     .then((data) => setData(data.message));
-  // }, []);
-  // !data ? console.log("Loading....") : console.log(data);
-
-  
-
+  // fetch data from the /api/questions route
   const useFetch = (url) => {
     const [data, setData] = useState([]);
     useEffect(() => {
@@ -42,22 +33,23 @@ function App() {
     "/api/questions"
   );
 
-  console.log(data);
-
+  // fetch the question content corresponding to the opened question
   function getQuestion(questionID) {
-      if (data == null || data == []) {
-        return ("Can't connect to the server")}
-        else {return data[questionID]["question"]};
-    }
-    function getAnswer(questionID) {
-      if (data == null || data == []) {
-        return ("Can't connect to the server")}
-        else {return data[questionID]["answer"]};
-    }
-    
-    function getImgSrc(questionID) {
-      return data[questionID]["questionImg"];
-    }
+    if (data === null || data === []) {
+       return ("Can't connect to the server")}
+    else {return data[questionID]["question"]};
+  }
+  // fetch the answer content corresponding to the opened question
+  function getAnswer(questionID) {
+    if (data === null || data === []) {
+      return ("Can't connect to the server")}
+    else {return data[questionID]["answer"]};
+  }
+  
+  // fetch image URL for the questions with images
+  function getImgSrc(questionID) {
+    return data[questionID]["questionImg"];
+  }
   
   return (<Router>
     <Switch>

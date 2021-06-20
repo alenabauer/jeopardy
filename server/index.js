@@ -15,6 +15,7 @@ app.get("/api", (req, res) => {
     res.json({ message: "Hello from server!" });
   });
 
+// Handle GET requests to /api/questions route
 app.get("/api/questions", (req, res) => {
     const questions = [
         {id: 1, question: "В каком городе Китая в 2008 году проходили летние Олимпийские игры?", answer: "Пекин"},
