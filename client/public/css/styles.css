@@ -21,10 +21,6 @@ body {
     text-align: center;
 }
 
-.thankyou-container {
-    top: 20vh;
-}
-
 h1.greeting {
     font-family: 'Oswald', sans-serif;
     color: #F4B701;
@@ -40,7 +36,7 @@ h1.greeting {
     animation-duration: 1s;
     animation-timing-function: ease-out;
 }
-.greeting-mid-line {
+.greeting-second-line {
     display: block;
     text-transform: lowercase;
     letter-spacing: 10px;
@@ -50,7 +46,7 @@ h1.greeting {
     animation-duration: 1s;
     animation-timing-function: ease-out;
 }
-.greeting-second-line {
+.greeting-third-line {
     margin-top: 40px;
     display: block;
     text-transform: uppercase;
@@ -62,7 +58,7 @@ h1.greeting {
     background-size: 200% auto;
     color: #fff;
     background-clip: text;
-    text-fill-color: transparent;
+    text-emphasis-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: textclip 2s linear infinite;
@@ -73,7 +69,6 @@ h1.greeting {
 		background-position: 200% center;
 	}
 }
-
 
 .btn-start:link,
 .btn-start:visited {
@@ -105,35 +100,6 @@ h1.greeting {
     background: #A13C02;
 }
 
-
-@keyframes moveInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    80%{
-        transform: translateX(10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-@keyframes moveInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    80% {
-        transform: translateX(-10px)
-    }
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -143,7 +109,7 @@ h1.greeting {
     }
 }
 
-
+/* Scoreboard Page */
 
 .tablo {
     display: flex;
@@ -234,6 +200,8 @@ h1.greeting {
     color: transparent;
 }
 
+/* Question Page */
+
 .question-container {
     color:#FECB34;
     width: 80%;
@@ -242,7 +210,6 @@ h1.greeting {
     margin: 0 auto;
     white-space: pre-wrap;
 }
-
 
 .question {
     font-size: 45px;
@@ -253,13 +220,6 @@ h1.greeting {
     height: 50vh;
     border-radius: 5%;
     box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
-    animation-name: fadeIn;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-}
-
-.thankyou-img {
-    height: 40vh;
     animation-name: fadeIn;
     animation-duration: 1s;
     animation-timing-function: ease-out;
@@ -337,10 +297,21 @@ h1.greeting {
     transition: color .6s ease;
     box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
 }
-.thank-you {
-    color:rgba(254, 203, 52, 0.1);
-}
+
 .back-btn-icon:hover {
     color: #F15B04;
     cursor: pointer;
+}
+
+/* Thank-You Page */
+
+.thankyou-container {
+    top: 20vh;
+}
+
+.thankyou-img {
+    height: 40vh;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
