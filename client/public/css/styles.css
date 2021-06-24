@@ -109,6 +109,18 @@ h1.greeting {
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .greeting-first-line{
+        font-size: 25px;
+    }
+    .greeting-second-line {
+        font-size: 20px;
+    }
+    .greeting-third-line{
+        font-size: 40px;
+    }
+}
+
 /* Scoreboard Page */
 
 .tablo {
@@ -200,6 +212,31 @@ h1.greeting {
     color: transparent;
 }
 
+@media only screen and (max-width: 600px) {
+    .tablo {
+        margin: 15px;
+    }
+    .category-box {
+        min-width: 100px;
+        font-size: 20px;
+        font-weight: 300;
+    }
+    .category-container:nth-child(2) .category-box {
+        font-size: 13px;
+    }
+    .category-box p {
+        padding-top: 8px;
+    }
+    .category-container:nth-child(2) .category-box p {
+        padding-top: 9px;
+    }
+    .score-box {
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+}
+
 /* Question Page */
 
 .question-container {
@@ -213,7 +250,6 @@ h1.greeting {
 
 .question {
     font-size: 45px;
-
 }
 
 .question-img {
@@ -301,6 +337,32 @@ h1.greeting {
 .back-btn-icon:hover {
     color: #F15B04;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .question {
+        font-size: 35px;
+    }
+    .question-move {
+        font-size: 35px;
+    }
+    .answer {
+        font-size: 35px;
+    }
+    .question-img {
+        height: 30vh;
+    }
+    .question-img-move {
+        height: 25vh;
+    }
+    @keyframes imgMove {
+        0% {
+            height: 30vh;
+        }
+        100% {
+            height: 25vh;
+        }
+    }
 }
 
 /* Thank-You Page */
